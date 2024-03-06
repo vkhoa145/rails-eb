@@ -1,0 +1,25 @@
+h1 hello
+
+= link_to 'form', new_user_path
+table.table
+  thead
+    tr
+      th[scope="col"]
+        | #
+      th[scope="col"]
+        | Name
+      th[scope="col"]
+        | Email
+      th[scope="col"]
+        | Age
+  tbody
+    - @users.each do |user|
+        tr 
+          td 
+            = user.id
+          td 
+            = user.name
+          td
+            = user.email
+          td
+            = user.age

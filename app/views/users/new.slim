@@ -1,0 +1,12 @@
+h1 Form
+= form_with( url: users_path , method: :post, id: 'userForm') do |f|
+  = f.label "name",class: 'control-label'
+  = f.text_field :name,class: 'form-control form-input', placeholder: 'name', id: 'nameInput'
+  br
+  = f.label "email",class: 'control-label'
+  = f.text_field :email,class: 'form-control form-input', placeholder: 'email', id: 'emailInput'
+  br
+  = f.label "age",class: 'control-label'
+  = f.text_field :age,class: 'form-control form-input', placeholder: 'age', id: 'ageInput'
+  br
+  = f.submit "submit", class: "btn btn-primary mr-2 admin-submit", id: 'Submit'
